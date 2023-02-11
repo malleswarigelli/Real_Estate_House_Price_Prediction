@@ -11,4 +11,12 @@
 ----------
 conda create -p venv python==3.7 -y
 ----------
+pip install -r requirements.txt
 
+git commands
+```
+git add .
+git status
+git commit -m "first commit"
+git push origin main
+```
