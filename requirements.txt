@@ -1,5 +1,12 @@
+Flask
+scikit-learn
 pandas
 numpy
-scikit-learn
-Flask
+matplotlib
+seaborn
 gunicorn
+PyYAML
+evidently
+dill
+datetime
+shutil
