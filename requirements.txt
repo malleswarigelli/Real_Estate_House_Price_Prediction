@@ -9,3 +9,4 @@ PyYAML
 evidently
 dill
 datetime
+-e .
