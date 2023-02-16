@@ -1,7 +1,9 @@
-# REGRESSION_pipeline
+**REGRESSION_pipeline**
+=======================
 
 
-Start Machine Learning Project
+
+*Start Machine Learning Project*
 
 software & tools requirements
 ```
@@ -104,6 +106,3 @@ Install Evidently library
 pip install evidently
 ```
 
-Assignment
------------
-### write a function to get training file path from artifact dir
