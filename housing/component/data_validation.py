@@ -7,6 +7,7 @@ from housing.logger import logging
 from housing.config.configuration import Configuration
 from housing.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact
 import pandas as pd
+import numpy as np
 from evidently.model_profile import Profile
 from evidently.model_profile.sections import DataDriftProfileSection
 from evidently.dashboard import Dashboard
@@ -132,4 +133,4 @@ class DataValidation:
             raise HousingException(e, sys) from e   
         
     def __del__(self):
-        logging.info(f"{'>>'*30}Data validation log completed.{'<<'*30}")
+        logging.info(f"{'>>'*20}Data validation log completed.{'<<'*20}")

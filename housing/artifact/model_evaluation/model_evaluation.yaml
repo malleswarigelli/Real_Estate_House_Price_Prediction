@@ -1,0 +1,5 @@
+best_model:
+  model_path: C:\Users\anjik\Desktop\iNeuron_FSDS\ML_end_to_end_projects\Real_Estate_House_Price_Prediction\housing\artifact\model_trainer\2023-02-16-17-11-51\trained_model\model.pkl
+history:
+  2023-02-16-17-11-51:
+    model_path: C:\Users\anjik\Desktop\iNeuron_FSDS\ML_end_to_end_projects\Real_Estate_House_Price_Prediction\housing\artifact\model_trainer\2023-02-16-16-53-15\trained_model\model.pkl

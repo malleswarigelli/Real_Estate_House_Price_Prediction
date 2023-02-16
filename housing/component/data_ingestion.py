@@ -8,6 +8,7 @@ import sys, os
 from housing.logger import logging
 from housing.entity.artifact_entity import DataIngestionArtifact
 import pandas as pd
+import numpy as np
 import pymongo
 from sklearn.model_selection import StratifiedShuffleSplit
 
@@ -51,10 +52,10 @@ class DataIngestion:
             housing_file_path = 'housing.csv'
             raw_data_file_path = os.path.join(raw_data_dir, housing_file_path)
             
-            logging.info(f"Storing pandas dataframe: [{dataframe_csv}] into csv file")
+            logging.info(f"Storing pandas dataframe into csv file")
             dataframe_csv.to_csv(raw_data_file_path, index=False)
             
-            logging.info(f"Successfully accessed data from mongobd database [{database}].")
+            logging.info(f"{'=='*20}Successfully accessed data from mongobd database [{database}].{'=='*20}")
             return dataframe_csv
         
         except Exception as e:
@@ -97,12 +98,12 @@ class DataIngestion:
             
             if strat_train_set is not None:
                 os.makedirs(self.data_ingestion_config.ingested_train_dir,exist_ok=True)
-                logging.info(f"Exporting training datset to file: [{train_file_path}]")
+                logging.info(f"Exporting split training datset to file: [{train_file_path}]")
                 strat_train_set.to_csv(train_file_path,index=False)
 
             if strat_test_set is not None:
                 os.makedirs(self.data_ingestion_config.ingested_test_dir, exist_ok= True)
-                logging.info(f"Exporting test dataset to file: [{test_file_path}]")
+                logging.info(f"Exporting split test dataset to file: [{test_file_path}]")
                 strat_test_set.to_csv(test_file_path,index=False)
             
 
@@ -128,4 +129,4 @@ class DataIngestion:
     
 
     def __del__(self):
-        logging.info(f"{'=='*20}Data Ingestion log completed.{'=='*20} \n\n")
+        logging.info(f"{'>>'*20}Data Ingestion log completed.{'<<'*20} \n\n")
