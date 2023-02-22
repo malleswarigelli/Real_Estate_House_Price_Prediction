@@ -9,4 +9,5 @@ PyYAML
 evidently
 dill
 datetime
+pymongo
 -e .
